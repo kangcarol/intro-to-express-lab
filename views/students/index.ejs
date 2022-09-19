@@ -38,10 +38,18 @@
         <th scope="col">Student ID</th>
       </tr>
     </thead>
-
+    <tbody>
+      <% students.forEach((student, i) => { %>
+        <tr>
+          <th scope="row"><%= `${i+1}` %></th>
+          <td><%= `${student.firstName}` %></td>
+          <td><%= `${student.lastName}` %></td>
+          <td><%= `${student._studentId}` %></td>
+        </tr>
+        <% }) %>
     </tbody>
   </table>
-  <!-- end of bootstrp -->
+  <!-- end of bootstrap -->
 
   </body>
 
